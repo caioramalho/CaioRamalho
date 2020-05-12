@@ -1,33 +1,92 @@
+/* soft reset do css */
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box ;
+}
+
 Body{
-  
-    background-image: url(https://nanoni.at/wp-content/uploads/2016/05/IT-nanoni-Korab-Thaci-1.jpg);
-    background-size: auto 100vh;
+
+  background-image: url('../img/fundo.jpg');
+  background-size: auto 100vh;
   font-family: Calibri (Corpo); 
-    height: 100vh;
+  height: 100vh;
+}
+/* se a tela tiver pelo menos 400 pixels irá carregar estes estilos */
+@media (min-width:400px){
+  body{
+    font-size: 14px;
   }
-  .menu{
-    background-color: white
+}
+/*Breaking points*/
+@media (min-width:600px){
+  body{
+    font-size: 16px;
   }
-  .menu ul{
-    display: flex;
-    justify-content: space-around;
+}
+@media (min-width:1200px){
+  body{
+    font-size: 22px;
   }
-  .menu li {
-    list-style: none;
-  } 
-  a{
-    color: orange;
-    text-decoration: none;
+}
+header{
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.menu{
+  background-color: white;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+.menu ul{
+  display: flex;
+  justify-content: space-around;
+}
+.menu li {
+  list-style: none;
+} 
+.menu a {
+  display: block;
+  padding: 5px 15px;
+}
+a{
+  color: orange;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.site-title{
+  color: orange;
+  text-align: center;
+  font-size: 4em;
   }
-  
-  a:hover {
-    text-decoration: underline;
+.site-subtitle{
+  color: orange;
+  text-align: center;
+  font-style: italic;
+}
+.Contatos,
+.Portfólio{
+  color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagens1,
+.imagens2{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
   }
-  .site-subtitle,
-  .site-title{
-    color: orange;
-    text-align: center;
-    }
-  .site-subtitle{
-    font-style: italic;
-  }
+.img-portfolio{
+  border-radius: 30%;
+  height: 100px;
+  width: 100px;
+
+}
