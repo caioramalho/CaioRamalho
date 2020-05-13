@@ -1,59 +1,72 @@
 /* soft reset do css */
-{
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box ;
+  box-sizing: border-box;
 }
 
-Body{
-
+body {
   background-image: url('../img/IT-nanoni-Korab-Thaci-1.png');
-  background-size: auto 100vh;
-  font-family: Calibri (Corpo); 
+  background-size: auto 100vh; 
+  font-family: 'Source Code Pro', monospace;
   height: 100vh;
+  font-size: 12px;
 }
-/* se a tela tiver pelo menos 400 pixels irá carregar estes estilos */
-@media (min-width:400px){
-  body{
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  body {
     font-size: 14px;
   }
 }
-/*Breaking points*/
-@media (min-width:600px){
-  body{
-    font-size: 16px;
+
+/* breakpoint */
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
   }
 }
-@media (min-width:1200px){
-  body{
-    font-size: 22px;
+
+/* breakpoint */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
   }
 }
-header{
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.menu{
-  background-color: white;
+
+.menu {
+  background-color: rgba(255, 255, 255, 0.685);
+  color: rgb(8, 22, 31);
   position: fixed;
   width: 100vw;
   top: 0;
+  
 }
-.menu ul{
+
+.menu ul {
   display: flex;
   justify-content: space-around;
 }
+
 .menu li {
-  list-style: none;
-} 
-.menu a {
-  display: block;
-  padding: 5px 15px;
+ list-style: none; 
 }
-a{
-  color: orange;
+
+.menu a {
+  
+  display: block;
+  padding: 10px 20px;
+}
+
+a {
+  color: teal;
   text-decoration: none;
 }
 
@@ -61,32 +74,73 @@ a:hover {
   text-decoration: underline;
 }
 
-.site-title{
-  color: orange;
+.site-subtitle, 
+.site-title {
+  color: whitesmoke;
   text-align: center;
-  font-size: 4em;
-  }
-.site-subtitle{
-  color: orange;
-  text-align: center;
-  font-style: italic;
 }
-.Contatos,
-.Portfólio{
-  color: orange;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.imagens1,
-.imagens2{
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  }
-.img-portfolio{
-  border-radius: 30%;
-  height: 100px;
-  width: 100px;
 
+.site-title {
+  font-size: 4em;
+  font-family: 'Gloria Hallelujah', cursive;
 }
+
+.site-subtitle {
+ font-style: italic;
+ font-family: 'Press Start 2P', cursive;
+ line-height: 1.8em;
+}
+.portfolio {
+  padding: 2em;
+  height: 100vh;
+}
+.portfolio h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+.Sobre {
+  padding: 1em;
+  height: 75vh;
+  background-color: rgb(8, 22, 31);
+}
+.Sobre h2{
+  font-family: 'Press Start 2P', cursive;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+.img-Sobre{
+  height: 250px;
+  width: 250px;
+}
+.Sobre p{
+  color: whitesmoke;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  padding: 1em;
+}
+.portfolio {
+  padding: 1em;
+  height: 30vh;
+  background-color:rgb(184, 66, 66);
+}
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(4,60px);
+}
+.portfolio figure {
+  text-align: center;
+}
+.portfolio figcaption{
+  color: aliceblue;
+  font-size: 10px;
+  text-align: center;
+}
+.img-portfolio {
+  height: 60px;
+  width: 60px;
+  border-radius: 30%;
+  }
