@@ -47,6 +47,7 @@ header {
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: 1;
   
 }
 
@@ -66,12 +67,29 @@ header {
 }
 
 a {
-  color: teal;
+  color: black;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+.titulo {
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+  animation: 1s cubic-bezier(0.755, 0.05, 0.855, 0.06) 500ms animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+  from {
+    transform: scale(0.9) translateY(-65vh);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
 }
 
 .site-subtitle, 
@@ -90,18 +108,10 @@ a:hover {
  font-family: 'Press Start 2P', cursive;
  line-height: 1.8em;
 }
-.portfolio {
-  padding: 2em;
-  height: 100vh;
-}
-.portfolio h2 {
-  font-family: 'Press Start 2P', cursive;
-  color: whitesmoke;
-  margin-bottom: 1.5em;
-  font-size: 2em;
-}
+
 .Sobre {
   padding: 1em;
+  padding-top: 55px;
   height: 75vh;
   background-color: rgb(8, 22, 31);
 }
@@ -120,27 +130,41 @@ a:hover {
   text-align: center;
   font-family: 'Press Start 2P', cursive;
   padding: 1em;
+  display: contents;
+	word-wrap: break-word;
 }
-.portfolio {
+.Sobre .div1{
+	display: inline-block;
+  vertical-align: middle;
+}
+.Sobre .div2{
+	display: inline-block;
+	float: right;
+	width: 75%;
+
+}
+.Contatos {
   padding: 1em;
-  height: 30vh;
+  padding-top: 55px;
+  height: 50vh;
   background-color:rgb(184, 66, 66);
+  font-family: 'Press Start 2P', cursive;
+  color: whitesmoke;
+  font-size: 22px;
+  border: 10px;
 }
-.portfolio .grid {
-  display: grid;
-  gap: 2em;
-  grid-template-columns: repeat(4,60px);
-}
-.portfolio figure {
+
+.Contatos .icons {
   text-align: center;
 }
-.portfolio figcaption{
-  color: aliceblue;
-  font-size: 10px;
-  text-align: center;
+
+.Contatos a{
+  color: whitesmoke;
+  font-size: 3em;
+  transition: text-shadow 1s;
 }
-.img-portfolio {
-  height: 60px;
-  width: 60px;
-  border-radius: 30%;
-  }
+.Contatos a:active,
+.Contatos a:hover  {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgb(21, 0, 114);
+}
